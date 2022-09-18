@@ -161,26 +161,3 @@ for iy in range(iyr1,iyr2+1):
       
   
 np.save('hdd_gridpoint', HDD_arr)
-"""
-  print(tmin)
-  CDD, HDD=degree_days(mins = tmin[:], maxs = tmax[:], threshold = 293.4278)
-  CDD_arr.append(CDD.sum())
-  HDD_arr.append(HDD.sum())
-"""
-"""
-  CDD, HDD=degree_days(mins = tmin, maxs = tmax, threshold = 18.0)
-  print(CDD.shape)
-  CDD_monthly = CDD.resample(time="M").sum()
-  HDD_monthly = HDD.resample(time="M").sum() 
-  
-  #specify the output file name and write CDD to a netCDF file
-  fnc=dir1+'/'+vname1+'.ei.oper.fc.sfc.regn128sc.'+tstr+'.nc'
-  ff=save_netCDF(fnc,CDD_monthly,lon1D,lat1D,vname1,lname1,str(iy),str(im).zfill(2),str(id).zfill(2))
-  
-  #specify the output file name and write HDD to a netCDF file
-  fnc=dir1+'/'+vname2+'.ei.oper.fc.sfc.regn128sc.'+tstr+'.nc'
-  ff=save_netCDF(fnc,HDD_monthly,lon1D,lat1D,vname2,lname2,str(iy),str(im).zfill(2),str(id).zfill(2))
-  print(tstr)
-
-print('Normal End!')
-"""
