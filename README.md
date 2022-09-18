@@ -1,7 +1,5 @@
 # seasonal_energy_pred
-Skillful prediction of UK winter seasonal energy demand based on autumn climate information. Use UK_energy.py to run predictions, and the other scripts to generate respective plots, and, if neccessary, to process data (remember to change file names and paths). For HDD proxy data, please calculate by running provided with the preprocessed hdd_gridpoint data. For the original NetCDF files that are too large to upload here, or any questions, please contact me. 
-
-The ERAI NetCDF daily min/max T2M data used to process the HDD proxy is available at: 
+Skillful prediction of UK winter seasonal energy demand based on autumn climate information. Use UK_energy.py to run predictions, and the other scripts to to process data and generate plots (remember to change file names and paths). For HDD proxy data, please run the provided code on ERAI NetCDF daily min/max T2m data over the UK. Please contact for any questions or concerns.
 
 Results plots and a poster presented at the 101st AMS meeting is also available.
 
