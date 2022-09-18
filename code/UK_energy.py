@@ -79,15 +79,13 @@ tdd = pd.read_csv('./UK_TDD2m.txt',sep='\s+')
 tdd = (tdd.val)
 tdd = signal.detrend(tdd)
 
+#Load preprocessed HDD data
+HDD = signal.detrend(np.load('hdd.npy'))
+index=HDD[:]
 
 #set predictand
 predictand_code=[elec, NAO, temp]
 index = predictand_code[2]
-
-index = new_NAO
-
-HDD = signal.detrend(np.load('hdd.npy'))
-index=HDD[:]
 
 #Initialize the predicted array
 yhat = np.zeros(index.shape)
@@ -117,10 +115,6 @@ if norml==1:
   temp=(temp-np.mean(temp))/np.std(temp)
   NAO=(NAO-np.mean(NAO))/np.std(NAO)
   new_NAO=(new_NAO-np.mean(new_NAO))/np.std(new_NAO)
-
-
-
-
 
 #year range
 yr = np.arange(1979,1979+yhat[:].shape[0],1)
